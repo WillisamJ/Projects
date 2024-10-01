@@ -1,0 +1,257 @@
+/* General body styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+}
+
+/* Main content area styles */
+main {
+    display: flex;
+    flex-direction: left;
+    align-items: left;
+    justify-content: left;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Figure styles for images */
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+/* Image styles */
+img {
+    width: 300px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image fits within the given dimensions */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Footer styles */
+footer {
+    margin-top: 20px;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation list styles */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #dddddd;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    padding: 8px;
+}
+
+/* Iframe styles for embedded videos */
+iframe {
+    display: block;
+    margin: 0 auto;
+    width: 50vw;
+    height: 50vh;
+}
+
+/* Header styles */
+.page-header {
+    background-color: lightcyan; /* Background color */
+    padding: 20px;            /* Padding around the title */
+    text-align: center;       /* Center align text */
+    width: 100%;              /* Full width */
+    position: relative;       /* Positioning context */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional shadow for depth */
+}
+
+#page-title {
+    margin: 0;               /* Remove default margin */
+    font-size: 2em;          /* Font size for title */
+    color: #333;             /* Text color */
+}
+
+/* Container styles */
+.container {
+    margin-top: 20px; /* Space between header and content */
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Theme styles */
+/* Light theme */
+body.light-theme {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+body.light-theme .page-header {
+    background-color: #ffffff;
+}
+
+body.light-theme .modal-content {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark theme */
+body.dark-theme {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-theme .page-header {
+    background-color: #444444;
+}
+
+body.dark-theme .modal-content {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+body.dark-theme #themeForm input,
+body.dark-theme #themeForm select {
+    background-color: #555555;
+    color: #ffffff;
+    border-color: #666666;
+}
+
+body.dark-theme .close {
+    color: #ffffff;
+}
+
+body.dark-theme .close:hover,
+body.dark-theme .close:focus {
+    color: #cccccc;
+}
+
+/* Blue theme */
+body.blue-theme {
+    background-color: #e6f2ff;
+    color: #00366d;
+}
+
+body.blue-theme .page-header {
+    background-color: #f0f8ff;
+}
+
+body.blue-theme .modal-content {
+    background-color: #f0f8ff;
+    color: #00366d;
+}
+
+/* Theme selection button styles */
+#themeBtn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#themeBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Theme form styles */
+#themeForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#themeForm label {
+    font-weight: bold;
+}
+
+#themeForm input,
+#themeForm select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#themeForm button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#themeForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for name, email, and theme inputs */
+#name, #email, #theme {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}

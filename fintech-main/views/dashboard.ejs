@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FinTech</title>
+        <link rel="stylesheet" href="/css/dashboard.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <h1>FinTech</h1>
+            <nav>
+                <ul>
+                    <!-- connections to other files so the pages can corrilate -->
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/transactions">View Transactions</a></li>
+                    <li><a href="/">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+    <main>
+        <!-- checks accoun balance  -->
+        <div class="account-balance">
+            <h2>Account Balance</h2>
+            <p>$<%= typeof accountBalance !== 'undefined' ? accountBalance.toFixed(2) : '0.00' %></p>
+        </div>
+        <!-- makes transfers -->
+
+        <div class="quick-transaction">
+            <h2>Quick Transaction</h2>
+            <form action="/transactions" method="POST">
+                <label for="transaction-type">Transaction Type:</label>
+                <select id="transaction-type" name="type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <!-- shows and allows the user to enter the amount of they so choose -->
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter amount" step="0.01" required>
+                <!-- desciption of say action  -->
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" placeholder="Enter description" required></textarea>
+
+                <button type="submit">Submit Transaction</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script></body>
+</html>

@@ -1,0 +1,14 @@
+How do primary and foreign keys help maintain data integrity?
+primary and foreign keys help maintain data integrity by acting as staples to unify tables.
+
+What insights can be gained by joining multiple tables?
+One piece of insight I gained is that inconsistency can ruin the results of the data in said tables.
+
+How can aggregate functions summarize data?
+When used with group by aggregate functions can give out a specific data value based on the function!
+
+What types of analyses are enabled by date functions?
+An analysis enabled by date functions could probably be some sort of weekly liter count.
+
+How might you extend this database for additional e-commerce features?
+I would extend this database by adding more sample data.

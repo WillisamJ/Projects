@@ -1,257 +1,248 @@
 /* General body styles */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: lightblue;
+    display: flex; /* Using flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start; /* Align items to the top */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set font family */
+    background-color: lightblue; /* Set background color */
 }
 
 /* Main content area styles */
 main {
-    display: flex;
-    flex-direction: left;
-    align-items: left;
-    justify-content: left;
-    gap: 20px;
-    padding: 20px;
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Add spacing between elements */
+    padding: 20px; /* Add padding inside the main area */
 }
 
 /* Figure styles for images */
 figure {
-    margin: 0;
-    text-align: center;
+    margin: 0; /* Remove margin */
+    text-align: center; /* Center align image captions */
 }
 
 /* Image styles */
 img {
     width: 300px; /* Set a fixed width */
     height: 200px; /* Set a fixed height */
-    object-fit: cover; /* Ensure the image fits within the given dimensions */
-    border: 2px solid #ccc;
-    border-radius: 8px;
+    object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+    border: 2px solid #ccc; /* Add a border around the image */
+    border-radius: 8px; /* Round the corners */
 }
 
 /* Footer styles */
 footer {
-    margin-top: 20px;
+    margin-top: 20px; /* Add space above the footer */
 }
 
 /* Link styles */
 a {
-    text-decoration: none;
-    color: #007BFF;
+    text-decoration: none; /* Remove underline from links */
+    color: #007BFF; /* Set link color */
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline links on hover */
 }
 
 /* Navigation list styles */
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #dddddd;
+    list-style: none; /* Remove bullet points from list */
+    padding: 0; /* Remove padding */
+    background-color: #dddddd; /* Set background color for the navigation */
 }
 
 li {
-    float: left;
+    display: inline-block; /* Display list items inline */
 }
 
 li a {
-    display: block;
-    padding: 8px;
+    display: block; /* Make links block elements */
+    padding: 8px; /* Add padding inside each link */
 }
 
 /* Iframe styles for embedded videos */
 iframe {
-    display: block;
-    margin: 0 auto;
-    width: 50vw;
-    height: 50vh;
+    display: block; /* Make iframe block-level element */
+    margin: 0 auto; /* Center the iframe horizontally */
+    width: 50vw; /* Set iframe width to 50% of the viewport width */
+    height: 50vh; /* Set iframe height to 50% of the viewport height */
 }
 
 /* Header styles */
 .page-header {
-    background-color: lightcyan; /* Background color */
-    padding: 20px;            /* Padding around the title */
-    text-align: center;       /* Center align text */
-    width: 100%;              /* Full width */
-    position: relative;       /* Positioning context */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional shadow for depth */
+    background-color: lightcyan; /* Set background color */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure header spans the full width */
+    position: relative; /* Allow positioning for child elements */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add shadow to header */
 }
 
 #page-title {
-    margin: 0;               /* Remove default margin */
-    font-size: 2em;          /* Font size for title */
-    color: #333;             /* Text color */
-}
-
-/* Container styles */
-.container {
-    margin-top: 20px; /* Space between header and content */
+    margin: 0; /* Remove margin */
+    font-size: 2em; /* Increase font size */
+    color: #333; /* Set dark text color */
 }
 
 /* Modal styles */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    display: none; /* Initially hide modal */
+    position: fixed; /* Fixed position at the top of the page */
+    z-index: 1; /* Ensure modal appears above other content */
+    top: 0; /* Position modal at the top */
+    left: 0; /* Position modal on the left */
+    width: 100%; /* Modal spans the full width of the page */
+    height: 100%; /* Modal spans the full height of the page */
+    background-color: rgba(0,0,0,0.4); /* Semi-transparent background */
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fefefe; /* White background for modal content */
+    margin: 15% auto; /* Center the modal content */
+    padding: 20px; /* Add padding inside modal */
+    border: 1px solid #888; /* Add border around modal */
+    width: 80%; /* Modal width 80% of the page */
+    max-width: 500px; /* Limit maximum width to 500px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to modal content */
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+    color: #aaa; /* Set close button color */
+    font-size: 28px; /* Increase font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
 .close:hover,
 .close:focus {
-    color: #000000;
-    text-decoration: none;
-    cursor: pointer;
+    color: #000; /* Change close button color on hover/focus */
 }
 
-/* Theme styles */
+/* Theme Styles (Grouped for Better Maintainability) */
+
 /* Light theme */
 body.light-theme {
-    background-color: #f0f0f0;
-    color: #000000;
+    background-color: #f0f0f0; /* Set light background color */
+    color: #000; /* Set text color to black */
 }
 
-body.light-theme .page-header {
-    background-color: #ffffff;
-}
-
+body.light-theme .page-header,
 body.light-theme .modal-content {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #ffffff; /* Set background color for light theme elements */
 }
 
 /* Dark theme */
 body.dark-theme {
-    background-color: #333333;
-    color: #ffffff;
+    background-color: #333333; /* Dark background color */
+    color: #ffffff; /* White text color */
 }
 
-body.dark-theme .page-header {
-    background-color: #444444;
-}
-
+body.dark-theme .page-header,
 body.dark-theme .modal-content {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: #444444; /* Dark background for header and modal content */
 }
 
 body.dark-theme #themeForm input,
 body.dark-theme #themeForm select {
-    background-color: #555555;
-    color: #ffffff;
-    border-color: #666666;
+    background-color: #555555; /* Dark background for form inputs */
+    color: #ffffff; /* White text color for form inputs */
+    border-color: #666666; /* Set border color for inputs */
 }
 
 body.dark-theme .close {
-    color: #ffffff;
+    color: #ffffff; /* White close button color */
 }
 
 body.dark-theme .close:hover,
 body.dark-theme .close:focus {
-    color: #cccccc;
+    color: #cccccc; /* Change color of close button on hover/focus */
 }
 
 /* Blue theme */
 body.blue-theme {
-    background-color: #e6f2ff;
-    color: #00366d;
+    background-color: #e6f2ff; /* Light blue background */
+    color: #00366d; /* Dark blue text color */
 }
 
-body.blue-theme .page-header {
-    background-color: #f0f8ff;
-}
-
+body.blue-theme .page-header,
 body.blue-theme .modal-content {
-    background-color: #f0f8ff;
-    color: #00366d;
+    background-color: #f0f8ff; /* Lighter blue background for header and modal content */
 }
 
-/* Theme selection button styles */
-#themeBtn {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* Green theme */
+body.green-theme {
+    background-color: #e8f5e9; /* Light green background */
+    color: #388e3c; /* Dark green text color */
 }
 
-#themeBtn:hover {
-    background-color: #0056b3;
+body.green-theme .page-header,
+body.green-theme .modal-content {
+    background-color: #81c784; /* Lighter green background for header and modal content */
 }
 
-/* Theme form styles */
+/* Red theme */
+body.red-theme {
+    background-color: #ffebee; /* Light red background */
+    color: #d32f2f; /* Dark red text color */
+}
+
+body.red-theme .page-header,
+body.red-theme .modal-content {
+    background-color: #f8bbd0; /* Lighter red background for header and modal content */
+}
+
+/* Purple theme */
+body.purple-theme {
+    background-color: #f3e5f5; /* Light purple background */
+    color: #6a1b9a; /* Dark purple text color */
+}
+
+body.purple-theme .page-header,
+body.purple-theme .modal-content {
+    background-color: #e1bee7; /* Lighter purple background for header and modal content */
+}
+
+/* Button and form styles */
+#themeBtn,
+#themeForm button,
+.whats-in {
+    padding: 10px 15px; /* Padding inside buttons */
+    background-color: #007BFF; /* Blue background color */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round the corners of the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+#themeBtn:hover,
+#themeForm button:hover,
+.whats-in:hover {
+    background-color: #0056b3; /* Darken button background on hover */
+}
+
 #themeForm {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#themeForm label {
-    font-weight: bold;
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 10px; /* Add space between form elements */
 }
 
 #themeForm input,
 #themeForm select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    background-color: #ffffff;
-    color: #000000;
+    padding: 8px; /* Add padding inside form fields */
+    border: 1px solid #ccc; /* Add border around form fields */
+    border-radius: 3px; /* Round corners of form fields */
 }
 
-#themeForm button {
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+#name,
+#email,
+#theme {
+    width: 100%; /* Make form inputs take up full width */
+    padding: 8px; /* Add padding inside the inputs */
+    margin-top: 5px; /* Add margin on top */
+    margin-bottom: 10px; /* Add margin at the bottom */
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
 }
 
-#themeForm button:hover {
-    background-color: #0056b3;
-}
 
-/* Styles for name, email, and theme inputs */
-#name, #email, #theme {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}

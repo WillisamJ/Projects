@@ -1,70 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Charset and viewport settings for responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage displayed on the browser tab -->
     <title>Video Player Layout</title>
+
+    <!-- Link to the external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!-- Header section containing the page title and navigation -->
     <header class="page-header">
         <h1 id="page-title">Not YouTube</h1>
-        <!-- Theme selection button-->
-        <button id="themeBtn">Select Theme</button>
+        
+        <!-- Navigation Menu -->
+        <nav class="navigation-menu">
+            <ul>
+                <!-- Home link with custom button style -->
+                <li><a class="whats-in" href="#home">Home</a></li>
+
+                <!-- Profile button -->
+                <li><button id="themeBtn">Profile</button></li>
+            </ul>
+        </nav>
     </header>
+
+    <!-- Main container for content -->
     <div class="container">
-        <main>
-            <!-- Main video container, will be populated by JavaScript -->
+        <section>
+            <!-- Main video container where the video will be displayed (dynamically populated by JavaScript) -->
             <div class="main-video" id="main-video-container"></div>
+
+            <!-- Title of the main video -->
             <h2 id="video-title">Main Video Title</h2>
+
+            <!-- Details about the video with collapsible description -->
             <details>
                 <summary>About the video</summary>
-                <p id="video-description">A try not to laugh video made by a youtuber called CoryXKenshin</p>
+                <p id="video-description">A try not to laugh video made by a YouTuber called CoryXKenshin</p>
             </details>
+
+            <!-- Video controls for autoplay setting and category selection -->
             <div class="controls">
                 <label for="autoplay">Auto-Play</label>
                 <input type="checkbox" id="autoplay">
+                
+                <!-- Dropdown menu to select video category -->
                 <select id="category">
-                    <option value="category1">relaxing Videos</option>
-                    <option value="category2">New Fnaf Videos</option>
+                    <option value="category1">Relaxing Videos</option>
+                    <option value="category2">New FNAF Videos</option>
                 </select>
             </div>
-        </main>
+        </section>
+
+        <!-- Suggested videos section -->
         <section class="suggested-videos">
             <h3>Watch Next</h3>
-            <!-- Suggested videos container, will be populated by JavaScript -->
+            <!-- Suggested videos grid (dynamically populated by JavaScript) -->
             <div class="video-grid" id="suggested-videos"></div>
         </section>
     </div>
+
+    <!-- Footer section containing social media links -->
     <footer>
         <p>Social Media Links</p>
     </footer>
 
-    <!-- The Modal -->
-    <div id="themeModal" class="modal">
+    <!-- The Modal for theme selection -->
+    <div id="themeModal" class="modal" role="dialog" aria-labelledby="themeModalTitle" aria-hidden="true">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Select Your Theme</h2>
+            <!-- Button to close the modal -->
+            <button class="close" aria-label="Close" id="closeModal">&times;</button>
+            
+            <!-- Modal title -->
+            <h2 id="themeModalTitle">Select Your Theme</h2>
+            
+            <!-- Form for collecting user preferences (name, password, email, and theme) -->
             <form id="themeForm">
+                <!-- Name input field -->
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-                
+
+                <!-- Password input field -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <!-- Email input field -->
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-                
-                <label for="theme">Theme:</label>
-                <select id="theme" name="theme">
-                    <option value="light">Light</option>
-                    <option value="dark">Dark</option>
-                    <option value="blue">Blue</option>
-                </select>
-                
+
+                <!-- Theme selection radio buttons -->
+                <label for="theme">Select Theme:</label>
+                <div id="theme-options">
+                    <label><input type="radio" name="theme" value="light" id="light-theme"> Light</label>
+                    <label><input type="radio" name="theme" value="dark" id="dark-theme"> Dark</label>
+                    <label><input type="radio" name="theme" value="blue" id="blue-theme"> Blue</label>
+                    <label><input type="radio" name="theme" value="green" id="green-theme"> Green</label>
+                    <label><input type="radio" name="theme" value="red" id="red-theme"> Red</label>
+                    <label><input type="radio" name="theme" value="purple" id="purple-theme"> Purple</label>
+                </div>
+
+                <!-- Button to submit the form and save preferences -->
                 <button type="submit">Save Preferences</button>
             </form>
         </div>
     </div>
 
     <!-- Link to the external JavaScript file -->
-    <script src="Javascript.js"></script>
+    <script src="Javascript.js" defer></script>
 </body>
+
 </html>
